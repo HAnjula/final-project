@@ -1,0 +1,59 @@
+<ng-container *ngIf="products.length!=0">
+    <div class="container">
+      <div class="card-table">
+        <div class="cart-product">
+          <table class="table table-responsive">
+
+            <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Product Name</th>
+              <th>Product image</th>
+              <th>Description</th>
+              <th>price</th>
+              <th>quantity</th>
+              <th>total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of products; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{item.category}}</td>
+              <td><img style="width: 120px" src="{{item.img_src}}" alt=""></td>
+              <td>{{item.id}}</td>
+              <td>{{item.amount}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.total}}</td>
+              <td>
+                <button (click)="removeItem(item)" class="btn btn-danger">Delete </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td><button class="btn btn-danger" (click)="emptycart()">Empty cart</button></td>
+              <td><button class="btn btn-primary" routerLink="/dashboard">Shop More</button></td>
+              <td><button class="btn btn-success" routerLink="/dashboard/customer">Checkout</button></td>
+              <td><strong>Grand Total : Rs : {{grandTotal}}/=</strong></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length==0">
+  <div class="container">
+    <div class="card">
+      <h1 class="card-title">My Cart</h1>
+    </div>
+    <div class="center">
+      <img class="image" src="https://thumbs.dreamstime.com/b/blue-shopping-cart-icon-white-background-30451735.jpg" alt="">
+      <h4>Your cart is empty !</h4>
+      <h6>Add item to it now</h6>
+      <button routerLink="/dashboard" class="btn btn-primary">Shop Now</button>
+    </div>
+  </div>
+
+</ng-container>

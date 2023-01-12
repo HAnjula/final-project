@@ -1,0 +1,35 @@
+.main-outer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner{
+
+  width: 80vw;
+  height: 80vh;
+  padding: 20px;
+  -webkit-box-shadow: -1px -1px 78px 10px rgba(0,0,0,0.69);
+  -moz-box-shadow: -1px -1px 78px 10px rgba(0,0,0,0.69);
+  box-shadow: -1px -1px 78px 10px rgba(0,0,0,0.69);
+  display: flex;
+}
+.process{
+  flex: 1;
+}
+.img-outer{
+  height: 100%;
+  width: 450px;
+  background-image: url("https://st3.depositphotos.com/1177973/17890/i/1600/depositphotos_178905100-stock-photo-happy-young-women-with-shopping.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+}
+//button{
+//  width: 100%;
+//  font-family: "Calibri Light";
+//}
+

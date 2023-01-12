@@ -1,0 +1,23 @@
+<div class="container">
+      <div class="header">
+        <div class="img-outer">
+          <img class="img-1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Bloomingdale%27s_Logo.svg/800px-Bloomingdale%27s_Logo.svg.png">
+        </div>
+        <div class="cart">
+          <button class="byn btn-primary" routerLink="cart">
+            <mat-icon class="mat-primary">add_shopping_cart</mat-icon>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+          </button>
+        </div>
+      </div>
+  <div class="row">
+    <ng-container *ngFor="let item of productList" >
+      <div class="card col-md-2">
+        <img width="175" height="190" src="{{item.img_src}}" style="margin-left: 15px; size: auto" alt="" class="img">
+        <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch">{{item.category}}</h5>
+        <p><strong>Price : </strong>Rs.{{item.amount}}</p>
+        <button class="btn btn-primary mat-raised-button" (click)="addtocart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

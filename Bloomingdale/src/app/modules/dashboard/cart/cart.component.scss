@@ -1,0 +1,36 @@
+
+.card{
+  height: 90vh;
+  margin: 25px;
+  padding: 25px;
+}
+h1{
+  font-weight: 600;
+}
+h4,h6{
+  font-weight: 500;
+}
+.center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.image{
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  height: 162px;
+  width: 250px;
+  margin: 20px 0px;
+}
+.card-table{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: aliceblue;
+  background-clip: border-box;
+}
